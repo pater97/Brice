@@ -1,0 +1,37 @@
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+    background: none;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #f6f6f6;
+}
+
+.logo {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        height: 50%;
+        width: 50%;
+        object-fit: contain;
+        animation: rotateLogo 6s linear infinite;
+    }
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+        filter: opacity(1);
+    }
+    50% {
+        filter: opacity(1);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: opacity(0);
+    }
+}
