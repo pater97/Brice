@@ -1,12 +1,16 @@
 import React from 'react'
+import Navbar from '../../components/Navbar'
 import './home.scss'
 
 function Home() {
   return (
-    <div id='home'>
-      <h1>
-        HOME
-      </h1>
+    <div >
+      <Navbar/>
+      <main id='home'>
+        <h1>
+          HOME
+        </h1>
+      </main>
     </div>
   )
 }

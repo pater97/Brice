@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 // import { useState , useEffect} from 'react'
 import '../styles/navbar.scss'
+// navigazione
+import withRouter from '../utils/wrapclass-component-routing/withNavigation'
 
 class Navbar extends Component {
     constructor(props) {
@@ -13,7 +15,7 @@ class Navbar extends Component {
     }
     // dropdown
     drop = () => {
-        this.setState({ dropDown: true })
+        this.setState({ dropDown: !this.state.dropDown })
     }
     noDrop = () => {
         this.setState({ dropDown: false })
@@ -35,6 +37,26 @@ class Navbar extends Component {
         };
     }
 
+    // navigazione
+    goToHome = () => {
+        this.props.router.navigate('/')
+    }
+    goToContacts = () => {
+        this.props.router.navigate('/contacts')
+    }
+    goToGallery = () => {
+        this.props.router.navigate('/gallery')
+    }
+    goToService = () => {
+        this.props.router.navigate('/service')
+    }
+    goToListen = () => {
+        this.props.router.navigate('/listen')
+    }
+    goToSetup = () => {
+        this.props.router.navigate('/setup')
+    }
+
 
     render() {
 
@@ -43,14 +65,14 @@ class Navbar extends Component {
                 <div className='banda'></div>
                 <nav id='nav'>
                     <div className='Home'>
-                        <button>
+                        <button onClick={this.goToHome}>
                             <h4>
                                 HOME
                             </h4>
                         </button>
                     </div>
                     <div className='brice'>
-                        <button onFocus={this.drop} onBlur={this.noDrop}>
+                        <button onClick={this.drop}>
                             <h4>
                                 B®ICE-STUDIO
                             </h4>
@@ -58,14 +80,14 @@ class Navbar extends Component {
                         <div className='dropdown'>
                             <ul className={`dropdown ${this.state.dropDown ? 'activeDrop' : ''}`}>
                                 <li>
-                                    <button>
+                                    <button onClick={this.goToGallery}>
                                         <h4>
                                             FOTO
                                         </h4>
                                     </button>
                                 </li>
                                 <li>
-                                    <button>
+                                    <button onClick={this.goToService}>
                                         <h4>
 
                                             SERVIZI
@@ -73,7 +95,7 @@ class Navbar extends Component {
                                     </button>
                                 </li>
                                 <li>
-                                    <button>
+                                    <button onClick={this.goToListen}> 
                                         <h4>
 
                                             ASCOLTA
@@ -81,7 +103,7 @@ class Navbar extends Component {
                                     </button>
                                 </li>
                                 <li>
-                                    <button>
+                                    <button onClick={this.goToSetup}>
                                         <h4>
                                             SETUP
                                         </h4>
@@ -91,7 +113,7 @@ class Navbar extends Component {
                         </div>
                     </div>
                     <div className='contatti'>
-                        <button>
+                        <button onClick={this.goToContacts}>
                             <h4>
                                 CONTATTI
                             </h4>
@@ -103,4 +125,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar
+export default withRouter(Navbar)
