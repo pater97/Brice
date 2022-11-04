@@ -1,16 +1,18 @@
-#home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-size: 5rem;
-    filter: opacity(0);
-    animation: enter linear 1s forwards;
-}
+@import '../../index.scss';
 
-@keyframes enter {
-    to {
-        filter: opacity(1);
+#home{
+    .photos,.intro{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .intro{
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
     }
 }
+
+
 

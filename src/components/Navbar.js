@@ -63,7 +63,7 @@ class Navbar extends Component {
         return (
             <div id='header' className={this.state.scroll ? 'activeHide' : ''}>
                 <div className='banda'></div>
-                <nav id='nav'>
+                <nav id='nav' >
                     <div className='Home'>
                         <button onClick={this.goToHome}>
                             <h4>
@@ -72,7 +72,7 @@ class Navbar extends Component {
                         </button>
                     </div>
                     <div className='brice'>
-                        <button onClick={this.drop}>
+                        <button onClick={this.drop} >
                             <h4>
                                 B®ICE-STUDIO
                             </h4>

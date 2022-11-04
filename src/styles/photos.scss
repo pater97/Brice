@@ -1,0 +1,69 @@
+.image,.description{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.image{
+    position: relative;
+    align-items: center;
+    .studioImage{
+        height: 80%;
+        width: 70%;
+        z-index: 10;
+        position: relative;
+        .activeImage{
+            width: 80% !important;
+            z-index: 11 !important;
+        }
+
+        .studioImageOne,.studioImageTwo,.studioImageTrhee{
+            position: absolute;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #7e7e7e;
+            transition: all .3s ease;
+            cursor: pointer;
+            &:hover{
+                transform: scale(110%);
+            }
+        }
+        .studioImageOne{
+            width: 60%;
+            top: 5%;
+            left: 0%;
+            z-index: 5;
+        }
+        .studioImageTwo{
+            width: 50%;
+            top: 20%;
+            right: 0;
+        }
+        .studioImageTrhee{
+            width: 60%;
+            bottom: 0;
+            right: 20%;
+            z-index: 6;
+        }
+    }
+    .logo{
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+}
+.description{
+    flex-direction: column;
+    padding: 0 100px;
+    h1{
+        font-size: 70px;
+        letter-spacing: 10px;
+    }
+    p{
+        font-size:20px;
+    }
+}
