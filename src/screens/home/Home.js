@@ -10,18 +10,16 @@ import './home.scss'
 
 function Home() {
 
- 
-
   return (
     <div >
       <Navbar />
       <main id='home'>
         {/* sezione home */}
-        <section className="intro">
+        <section className="intro container mx-auto">
           <Intro/>
         </section>
         {/* sezione immagini */}
-        <section className='photos'>
+        <section className='photos container mx-auto grid lg:grid-cols-2 md:grid-cols-1 gap-6'>
           <Photos/>
         </section>  
       {/* sezione servizi */}

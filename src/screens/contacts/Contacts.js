@@ -1,9 +1,13 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
+
+
+
 function Contacts() {
   return (
-    <div>
-      <Navbar/>
+    <div id='contacts' className='container mx-auto'>
+      <Navbar />
+
     </div>
   )
 }

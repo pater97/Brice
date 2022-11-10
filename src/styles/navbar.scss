@@ -19,7 +19,6 @@
     .banda{
         position: absolute;
         height: 63px;
-        // background: url("./assets/nuova-banda.png") repeat-x;
         background-color: #f6f6f6;
         background-image: url('../assets/banda-rect.png');
         background-size: contain;
@@ -43,10 +42,19 @@
     margin-top: 63px;
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding: 20px 0;
     button{
         background: none;
         border: none;
+        .activeEffect{
+            height: 2px;
+            background-color: #fff;
+            width: 0;
+            transition:all .2s ease-in-out;
+        }
+        h4:hover .activeEffect{
+            width: 100%;
+        }
         h4{
             color: #f6f6f6;
             font-size: 25px;
@@ -54,9 +62,6 @@
             font-family: bebas neue;
             font-weight: 500;
             cursor: pointer;
-            &:hover{
-                border-bottom: 1px solid white;
-            }
         }
     }
     .brice{
@@ -84,8 +89,8 @@
     background-color: #101010;
 }
 
-@media(max-width: 500px){
-    #header{
+@media(max-width: 640px){
+    #nav,.banda{
         display: none;
     }
 }

@@ -57,3 +57,19 @@ body::-webkit-scrollbar-thumb {
         box-shadow: 0px 0px 10px 0px $light;
     }
 }
+.buttonSecondary{
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: bebas neue;
+    letter-spacing: 5px;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+    border: 1px solid #f6f6f6;
+    &:hover{
+        // transform: scale(105%);
+        transform: skewX(10px);
+        text-decoration: line-through;
+    }
+}

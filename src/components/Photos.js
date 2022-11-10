@@ -39,28 +39,26 @@ function Photos() {
     }
 
     return (
-        <div>
-            <section className='photos'>
-                <div className='image'>
-                    <div className='studioImage'>
-                        <img onClick={viewStudio} className={`studioImageOne ${state.studio ? 'activeImage' : ''}`} src={StudioImage} alt="imageStudio" />
-                        <img onClick={viewCabin} className={`studioImageTwo ${state.cabin ? 'activeImage' : ''}`} src={cabin} alt="imageStudio" />
-                        <img onClick={viewTastiera} className={`studioImageTrhee ${state.tastiera ? 'activeImage' : ''}`} src={tasiera} alt="imageStudio" />
-                    </div>
+        <>
+            <div className='image'>
+                <div className='studioImage '>
+                    <img onClick={viewStudio} className={`studioImageOne ${state.studio ? 'activeImage' : ''}`} src={StudioImage} alt="imageStudio" />
+                    <img onClick={viewCabin} className={`studioImageTwo ${state.cabin ? 'activeImage' : ''}`} src={cabin} alt="imageStudio" />
+                    <img onClick={viewTastiera} className={`studioImageTrhee ${state.tastiera ? 'activeImage' : ''}`} src={tasiera} alt="imageStudio" />
                 </div>
-                <div className='description'>
-                    <h1>
-                        LOREM IPSUM
-                    </h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia saepe, nihil sed similique, mollitia, nostrum harum dolores numquam sint suscipit omnis enim nisi eaque rerum. Voluptatum officia quibusdam vero officiis magnam libero ea quia dicta cumque numquam quisquam incidunt, quae ab, adipisci placeat. Blanditiis iure quam fugit expedita itaque reprehenderit!</p>
-                    <div className="button">
-                        <button className="buttonPrimary">
-                            View more
-                        </button>
-                    </div>
+            </div>
+            <div className='description'>
+                <h1>
+                    LOREM IPSUM
+                </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia saepe, nihil sed similique, mollitia, nostrum harum dolores numquam sint suscipit omnis enim nisi eaque rerum. Voluptatum officia quibusdam vero officiis magnam libero ea quia dicta cumque numquam quisquam incidunt, quae ab, adipisci placeat. Blanditiis iure quam fugit expedita itaque reprehenderit!</p>
+                <div className="button">
+                    <button className="buttonSecondary">
+                        View more
+                    </button>
                 </div>
-            </section>
-        </div>
+            </div>
+        </>
     )
 }
 

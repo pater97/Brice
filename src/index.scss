@@ -3,6 +3,9 @@ $onix: #3C3C3C;
 $light: #f6f6f6;
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Bebas+Neue&family=Noto+Serif:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 *{
   margin: 0;
@@ -12,10 +15,12 @@ $light: #f6f6f6;
 
 body {
   background-color: $bgColor ;
-  // font-family: 'Barlow Condensed', sans-serif;
-  // font-family: 'Noto Serif', serif;
   font-family: 'Bebas Neue', cursive;
   color: $light;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 

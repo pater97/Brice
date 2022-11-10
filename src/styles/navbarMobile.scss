@@ -1,0 +1,49 @@
+#headerMobile{
+    position: relative;
+    #navMobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 15px;
+        .navLogo{
+            img{
+                width: 70px;
+            }
+        }
+        .hamburger{
+            svg{
+                height: 40px;
+                width: auto;
+            }
+        }
+    }
+    .dropDownMobile{
+        height: 90vh;
+        width: 0%;
+        background-color: #101010;
+        transition: all .2s ease-in-out;
+        overflow: hidden;
+        z-index: 20;
+        position: fixed;
+        top: 10vh;
+        left: 0;
+        ul{
+            padding: 10px 20px;
+            li{
+                font-size: 28px;
+                margin-bottom: 30px ;
+            }
+        }
+    }
+    .activeDDMobile{
+        width: 100%;
+    }
+}
+
+@media(min-width: 640px){
+    #headerMobile{
+        display: none;
+    }
+}
+

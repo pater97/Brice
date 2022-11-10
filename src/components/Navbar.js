@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import '../styles/navbar.scss'
 // navigazione
 import withRouter from '../utils/wrapclass-component-routing/withNavigation'
+// componente
+import NavbarMobile from './NavbarMobile'
 
 class Navbar extends Component {
     constructor(props) {
@@ -38,36 +40,22 @@ class Navbar extends Component {
     }
 
     // navigazione
-    goToHome = () => {
-        this.props.router.navigate('/')
+    navigation = (routes) => () => {
+        this.props.router.navigate(`${routes}`)
     }
-    goToContacts = () => {
-        this.props.router.navigate('/contacts')
-    }
-    goToGallery = () => {
-        this.props.router.navigate('/gallery')
-    }
-    goToService = () => {
-        this.props.router.navigate('/service')
-    }
-    goToListen = () => {
-        this.props.router.navigate('/listen')
-    }
-    goToSetup = () => {
-        this.props.router.navigate('/setup')
-    }
-
 
     render() {
 
         return (
             <div id='header' className={this.state.scroll ? 'activeHide' : ''}>
                 <div className='banda'></div>
-                <nav id='nav' >
+                <NavbarMobile/>
+                <nav id='nav' className='container mx-auto'>
                     <div className='Home'>
-                        <button onClick={this.goToHome}>
+                        <button onClick={this.navigation('/')}>
                             <h4>
                                 HOME
+                            <div className="activeEffect"></div>
                             </h4>
                         </button>
                     </div>
@@ -75,37 +63,40 @@ class Navbar extends Component {
                         <button onClick={this.drop} >
                             <h4>
                                 B®ICE-STUDIO
+                            <div className="activeEffect"></div>
                             </h4>
                         </button>
                         <div className='dropdown'>
                             <ul className={`dropdown ${this.state.dropDown ? 'activeDrop' : ''}`}>
                                 <li>
-                                    <button onClick={this.goToGallery}>
+                                    <button onClick={this.navigation('/gallery')}>
                                         <h4>
                                             FOTO
+                                        <div className="activeEffect"></div>
                                         </h4>
                                     </button>
                                 </li>
                                 <li>
-                                    <button onClick={this.goToService}>
+                                    <button onClick={this.navigation('/service')}>
                                         <h4>
-
                                             SERVIZI
+                                            <div className="activeEffect"></div>
                                         </h4>
                                     </button>
                                 </li>
                                 <li>
-                                    <button onClick={this.goToListen}> 
+                                    <button onClick={this.navigation('/listen')}> 
                                         <h4>
-
                                             ASCOLTA
+                                            <div className="activeEffect"></div>
                                         </h4>
                                     </button>
                                 </li>
                                 <li>
-                                    <button onClick={this.goToSetup}>
+                                    <button onClick={this.navigation('/setup')}>
                                         <h4>
                                             SETUP
+                                            <div className="activeEffect"></div>
                                         </h4>
                                     </button>
                                 </li>
@@ -113,9 +104,10 @@ class Navbar extends Component {
                         </div>
                     </div>
                     <div className='contatti'>
-                        <button onClick={this.goToContacts}>
+                        <button onClick={this.navigation('/contacts')}>
                             <h4>
                                 CONTATTI
+                                <div className="activeEffect"></div>
                             </h4>
                         </button>
                     </div>
