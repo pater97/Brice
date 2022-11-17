@@ -40,21 +40,23 @@ body::-webkit-scrollbar-thumb {
 }
 
 .buttonPrimary{
+    background-color: $bgColor;
+    color: $light;
     padding: 10px 20px;
     margin: 20px 0;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 1px;
     font-weight: bold;
     font-family: bebas neue;
     letter-spacing: 5px;
-    font-size: 17px;
+    font-size: 20px;
     transition: all .3s ease-in-out;
     border: none;
+    border: 1px solid $light;
     &:hover{
-        transform: scale(105%);
-        background-color: $bgColor;
-        color: white;
-        box-shadow: 0px 0px 10px 0px $light;
+        border: 1px solid $bgColor;
+        background-color: $light;
+        color: $bgColor;
     }
 }
 .buttonSecondary{
@@ -68,8 +70,6 @@ body::-webkit-scrollbar-thumb {
     transition: all .3s ease-in-out;
     border: 1px solid #f6f6f6;
     &:hover{
-        // transform: scale(105%);
-        transform: skewX(10px);
         text-decoration: line-through;
     }
 }

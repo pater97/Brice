@@ -1,0 +1,69 @@
+@import '../index.scss';
+.serviceCardContainer{
+    margin-left: 20px;
+    padding: 50px 0;
+}
+.serviceCardLinkContainer{
+    // background-color: silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px ;
+    position: relative;
+    h2{
+        font-weight: bold;
+        font-size: 4rem;
+        letter-spacing: 10px;
+        text-align: end;
+    }
+    P{
+        text-align: end;
+        font-size: 20PX;
+    }
+    .buttonScopri{
+        display: flex;
+        justify-content: end;
+    }
+}
+
+.card-container {
+    position: relative;
+    // background-color: aqua;
+    min-height: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    .titleCard {
+        background-color: $bgColor;
+        text-align: end;
+        transform: skew(5deg);
+        h2 {
+            font-size: 2rem;
+            color: $light;
+            padding: 10px 20px 5px 0px;
+            letter-spacing: 5px;
+        }
+    }
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        
+        &.microphone {
+            width: 200px;
+            filter: drop-shadow(10px 10px 10px #101010);
+        }
+    }
+}
+        // img{
+        //     width: 60%;
+        //     position: absolute;
+        //     filter: drop-shadow(0px 10px 10px #101010);
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%,-50%);
+        // }
